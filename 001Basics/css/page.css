@@ -13,6 +13,22 @@ page
     text-align: center;
 
 }
+#z
+{
+    font-size: 36px;
+    display: block;
+    animation: z 10s infinite;
+}
+@keyframes z
+{
+    0%{opacity: 0}
+    20%{opacity: 0}
+    40%{opacity: 0}
+    70%{opacity: 0}
+    80%{opacity: 100}
+    90%{opacity: 0}
+    100%{opacity: 0}
+}
 #c
 {
     background-color: lightgreen;
@@ -25,6 +41,8 @@ page
 }
 #q
 {
+    background-image: url("../images/0.jpg");
+    background-size: 100% 100%;
     animation: q 10s infinite;
 }
 #d
