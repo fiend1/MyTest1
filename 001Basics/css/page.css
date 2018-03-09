@@ -17,7 +17,7 @@ page
 {
     font-size: 36px;
     display: block;
-    animation: z 10s infinite;
+    animation: z 110s infinite;
 }
 @keyframes z
 {
@@ -32,24 +32,24 @@ page
 #c
 {
     background-color: lightgreen;
-    animation: c 10s infinite;
+    animation: c 110s infinite;
 }
 #x
 {
     background-color: red;
-    animation: x 10s infinite;
+    animation: x 110s infinite;
 }
 #q
 {
     background-image: url("../images/0.jpg");
     background-size: 100% 100%;
-    animation: q 10s infinite;
+    animation: q 110s infinite;
 }
 #d
 {
     background-color: black;
     color: white;
-    animation: d 10s infinite;
+    animation: d 110s infinite;
 }
 @keyframes c
 {
