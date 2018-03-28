@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="image/1.png" id="cimg">
+<input type="button" value="停止" onclick="Myonclick()" id="btn">
+</body>
+<script>
+    var a=0;
+    var flag=1;//标记图片是否继续滚动，1 表示继续，0 表示停止
+    // function Roll() {
+    //     document.getElementById('img').src="image/"+a+".png";
+    //     document.getElementById('img').attributes('src',"image/"+a+".png");
+    //     setTimeout("Roll()",1000);
+    //     a=a+1;
+    // }
+    // var a=1;
+    // var mySrc=document.getElementById('img').src;
+    // Roll();
+function Myonclick() {
+    if(flag==0)
+    {
+        Tostart();
+
+    }
+    else
+    {
+        Tostop();
+
+    }
+}
+function Tostop() {
+   flag=0;
+    document.getElementById("btn").value="开始";
+
+}
+function Tostart() {
+    flag=1;
+    document.getElementById("btn").value="停止";
+    change();
+}
+function change() {
+    if(flag==0)
+    {
+        return;
+    }
+    else
+    {
+        if(a<=5)
+        {
+            a++;
+        }
+        else
+        {
+            a=1;
+        }
+
+        document.getElementById("cimg").src="image/"+a+".png";
+        setTimeout("change()",100);
+    }
+
+}
+change();
+
+</script>
+</html>

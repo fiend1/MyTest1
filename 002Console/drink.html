@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function isInteger(n)//判断数字是否为整数  n代表数字
+        {
+            return n%1==0;
+        }
+        var price=10,count,totalPrice;
+        count=prompt("您要多少杯？");
+        if(isNaN(count)||count<=0||(isInteger(count))==false)
+        {
+            alert("请输入有效的值！！！")
+        }
+        else
+        {
+            if((count % 2)==0)//杯数是偶数
+            {
+
+                totalPrice=(count/2)*price+(count/2)*(price/2)
+            }
+            else//杯数是奇数s
+            {
+                count=count-1;
+                totalPrice=(count/2)*price+(count/2)*(price/2)+price;
+
+            }
+            alert("总的价格是："+totalPrice);
+            document.write("您一共消费了"+totalPrice+"元。");//页面输出文字
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
