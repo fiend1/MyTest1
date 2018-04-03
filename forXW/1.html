@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <form id="upload" enctype="multipart/form-data" method="post">
+    <input type="file" name="file" id="pic"/>
+    <input type="button" value="提交" onclick="uploadPic();"/>
+    <span class="showUrl"></span>
+    <img src="" class="showPic" alt="">
+   </form>
+
+</body>
+<script>
+    function uploadPic() {
+        var form = document.getElementById('upload'),
+            formData = new FormData(form);
+        $.ajax({
+            url:"https://fiend1.github.io/MyTest1/forXW/",
+            type:"post",
+            data:formData,
+            processData:false,
+            contentType:false,
+            success:function(res){
+                if(res){
+                    alert("上传成功！");
+                }
+                console.log(res);
+                $("#pic").val("");
+                $(".showUrl").html(res);
+                $(".showPic").attr("src",res);
+            },
+            error:function(err){
+                alert("网络连接失败,稍后重试",err);
+            }
+
+        })
+
+    }
+
+</script>
+</html>
