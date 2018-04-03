@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>列表</title>
+
+</head>
+<body>
+<input type="button" value="添加" onclick="add()">
+<input type="text" id="num">
+<table border="1" id="tb">
+    <tr>
+        <th>自编型号</th>
+        <th>科升链接</th>
+    </tr>
+    <tr>
+        <td>January</td>
+        <td>$100</td>
+    </tr>
+</table>
+</body>
+<script>
+    function add() {
+        var atr=document.getElementById("tb");
+        var newTr=atr.insertRow(2);
+        var newTd=newTr.insertCell();//表示在添加的行上添加第一格
+        newTd.innerHTML=document.getElementById("num").value;
+        var newTd2=newTr.insertCell();//表示在添加的行上添加第二格
+    }
+
+
+</script>
+</html>
